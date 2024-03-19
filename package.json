@@ -1,0 +1,11 @@
+{
+  "name": "starlight-head",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": ["Starlight", "Astro"],
+  "author": "liruifengv",
+  "license": "MIT"
+}
