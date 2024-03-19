@@ -1,4 +1,4 @@
-import { Plugin, defineConfig } from "vite";
+import { type Plugin, defineConfig } from "vite";
 import dts from "vite-plugin-dts";
 
 const name = "starlight-head";
