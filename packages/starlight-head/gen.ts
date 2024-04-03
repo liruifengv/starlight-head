@@ -1,9 +1,10 @@
 import { parse } from '@astrojs/compiler';
 import { walk, is } from '@astrojs/compiler/utils';
+import type { StarlightPlugin, StarlightUserConfig } from '@astrojs/starlight/types'
 
 import fs from 'node:fs';
 
-interface HeadConfig {
+export interface HeadConfig {
   tag: string;
   attrs?: Record<string, string | boolean | undefined>;
   content?: string;
@@ -13,28 +14,7 @@ const results: HeadConfig[] = [];
 
 const canUseInHead = ['title', 'base', 'link', 'style', 'meta', 'script', 'noscript', 'template']
 
-const source = fs.readFileSync('./head.astro', 'utf8');
-
-const result = await parse(source, {
-  position: false,
-});
-
-walk(result.ast, (node) => {
-  if (!is.tag(node)) return;
-  if (is.tag(node) && !canUseInHead.includes(node.name)) {
-    throw new Error(`Element <${node.name}> is not allowed in the head.`);
-  }
-  if (canUseInHead.includes(node.name)) {
-    console.log(node)
-  }
-
-  convertASTToHeadConfig(node);
-  // console.log('results: ', results);
-});
-
-// 转换函数
-function convertASTToHeadConfig(node) {
-
+function convertASTToHeadConfig(node): HeadConfig {
   const headConfig: HeadConfig = {
     tag: node.name,
     attrs: {}
@@ -57,5 +37,28 @@ function convertASTToHeadConfig(node) {
     headConfig.content = node.children.map(child => child.value).join('\n');
   }
 
-  results.push(headConfig);
+  return headConfig;
+}
+
+export async function generateHeadConfig(path): Promise<HeadConfig[]> {
+	const source = fs.readFileSync(path, 'utf8');
+
+	const result = await parse(source, {
+		position: false,
+	});
+
+	walk(result.ast, (node) => {
+		if (!is.tag(node)) return;
+		if (is.tag(node) && !canUseInHead.includes(node.name)) {
+			throw new Error(`Element <${node.name}> is not allowed in the head.`);
+		}
+		if (canUseInHead.includes(node.name)) {
+			console.log(node)
+		}
+		
+		const head = convertASTToHeadConfig(node);
+		results.push(head);
+	});
+	
+	return results
 }
