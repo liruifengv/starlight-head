@@ -1,1 +1,8 @@
-console.log("Hello Starlight!");
+export default {
+	name: 'starlight-head',
+	hooks: {
+	  plugin({ addIntegration, astroConfig }) {
+		
+	  },
+	},
+  };

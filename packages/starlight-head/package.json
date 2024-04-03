@@ -17,7 +17,7 @@
   "scripts": {
     "dev": "vite build --watch",
     "build": "vite build",
-	"preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm"
   },
   "types": "./dist/types/index.d.ts",
   "keywords": [],
@@ -33,5 +33,8 @@
   "homepage": "https://github.com/liruifengv/starlight-head",
   "publishConfig": {
     "access": "public"
+  },
+  "dependencies": {
+    "@astrojs/compiler": "^2.7.1"
   }
 }

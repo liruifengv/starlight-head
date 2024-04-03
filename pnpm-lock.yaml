@@ -24,9 +24,17 @@ importers:
         specifier: ^3.7.1
         version: 3.7.1(typescript@5.3.3)(vite@5.0.12)
 
-  packages/starlight-head: {}
+  packages/starlight-head:
+    dependencies:
+      '@astrojs/compiler':
+        specifier: ^2.7.1
+        version: 2.7.1
 
 packages:
+
+  /@astrojs/compiler@2.7.1:
+    resolution: {integrity: sha512-/POejAYuj8WEw7ZI0J8JBvevjfp9jQ9Wmu/Bg52RiNwGXkMV7JnYpsenVfHvvf1G7R5sXHGKlTcxlQWhoUTiGQ==}
+    dev: false
 
   /@babel/code-frame@7.23.5:
     resolution: {integrity: sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA==}
