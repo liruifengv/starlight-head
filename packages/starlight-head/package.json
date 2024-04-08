@@ -1,45 +1,43 @@
 {
-  "name": "starlight-head",
-  "version": "0.0.0",
-  "description": "A Starlight plugin for easy to add <head> for your Starlight site",
-  "main": "./dist/starlight-head.js",
-  "module": "./dist/starlight-head.mjs",
-  "files": [
-    "dist"
-  ],
-  "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/starlight-head.mjs",
-      "require": "./dist/starlight-head.js"
-    }
-  },
-  "scripts": {
-    "dev": "vite build --watch",
-    "build": "rimraf dist & vite build",
-    "preinstall": "npx only-allow pnpm"
-  },
-  "types": "./dist/types/index.d.ts",
-  "keywords": [],
-  "author": "liruifengv",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/liruifengv/starlight-head"
-  },
-  "bugs": {
-    "url": "https://github.com/liruifengv/starlight-head/issues"
-  },
-  "homepage": "https://github.com/liruifengv/starlight-head",
-  "publishConfig": {
-    "access": "public"
-  },
-  "dependencies": {
-    "@astrojs/compiler": "^2.7.1",
-    "@astrojs/starlight": "^0.21.3"
-  },
-  "devDependencies": {
-    "@types/node": "^20.12.5",
-    "rimraf": "^5.0.5"
-  }
+	"name": "starlight-head",
+	"version": "0.0.0",
+	"description": "A Starlight plugin for easy to add <head> for your Starlight site",
+	"main": "./dist/starlight-head.js",
+	"module": "./dist/starlight-head.mjs",
+	"files": ["dist"],
+	"exports": {
+		".": {
+			"types": "./dist/types/index.d.ts",
+			"import": "./dist/starlight-head.mjs",
+			"require": "./dist/starlight-head.js"
+		}
+	},
+	"scripts": {
+		"dev": "vite build --watch",
+		"build": "rimraf dist & vite build",
+		"preinstall": "npx only-allow pnpm"
+	},
+	"types": "./dist/types/index.d.ts",
+	"keywords": [],
+	"author": "liruifengv",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/liruifengv/starlight-head"
+	},
+	"bugs": {
+		"url": "https://github.com/liruifengv/starlight-head/issues"
+	},
+	"homepage": "https://github.com/liruifengv/starlight-head",
+	"publishConfig": {
+		"access": "public"
+	},
+	"dependencies": {
+		"@astrojs/compiler": "^2.7.1",
+		"@astrojs/starlight": "^0.21.3"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.5",
+		"rimraf": "^5.0.5"
+	}
 }
