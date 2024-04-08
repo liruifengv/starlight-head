@@ -56,8 +56,8 @@ starlight({
 		},
 	},
     {
-      tag: 'script',
-      content: 'window.onload = function() {\n\tconsole.log("Page loaded");\n}',
+		tag: 'script',
+		content: 'window.onload = function() {\n\tconsole.log("Page loaded");\n}',
     },
   ],
 });
