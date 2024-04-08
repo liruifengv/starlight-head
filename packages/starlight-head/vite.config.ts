@@ -1,6 +1,6 @@
+import { builtinModules } from "node:module";
 import { type Plugin, defineConfig } from "vite";
 import dts from "vite-plugin-dts";
-import { builtinModules } from "node:module";
 
 const name = "starlight-head";
 

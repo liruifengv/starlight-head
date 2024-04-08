@@ -1,8 +1,8 @@
 import fs from "node:fs";
 import { parse } from "@astrojs/compiler";
-import type { TagLikeNode, FrontmatterNode } from "@astrojs/compiler/types";
+import type { FrontmatterNode, TagLikeNode } from "@astrojs/compiler/types";
 import { is } from "@astrojs/compiler/utils";
-import type { HeadConfig, EvaluatedExpression } from "./scheme";
+import type { EvaluatedExpression, HeadConfig } from "./scheme";
 import { getDescendants } from "./walker";
 
 import type { AstroIntegrationLogger } from "astro";

@@ -1,10 +1,10 @@
 import type {
-	Node,
-	TagLikeNode,
-	ParentNode,
 	FrontmatterNode,
+	Node,
+	ParentNode,
+	TagLikeNode,
 } from "@astrojs/compiler/types";
-import { is, type Visitor } from "@astrojs/compiler/utils";
+import { type Visitor, is } from "@astrojs/compiler/utils";
 
 const canUseInHead = [
 	"title",
