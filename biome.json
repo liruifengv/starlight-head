@@ -4,7 +4,11 @@
 		"enabled": true
 	},
 	"files": {
-		"ignore": ["packages/**/dist/*"]
+		"ignore": [
+			"packages/**/dist/*",
+			"packages/**/package.json",
+			"packages/**/tsconfig.json"
+		]
 	},
 	"linter": {
 		"enabled": true,
