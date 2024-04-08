@@ -4,9 +4,7 @@
 	"description": "A Starlight plugin for easy to add <head> for your Starlight site",
 	"main": "./dist/starlight-head.js",
 	"module": "./dist/starlight-head.mjs",
-	"files": [
-		"dist"
-	],
+	"files": ["dist"],
 	"exports": {
 		".": {
 			"types": "./dist/types/index.d.ts",
