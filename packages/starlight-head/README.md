@@ -1,6 +1,6 @@
 ## starlight-head
 
-A Starlight plugin for easy to add <head> for your Starlight site.
+A Starlight plugin for easy to add `<head>` for your Starlight site.
 
 ### Installation
 
