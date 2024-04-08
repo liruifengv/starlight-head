@@ -17,9 +17,9 @@ jobs:
       - name: Run Biome
         run: biome ci packages
       - name: Install PNPM
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v3
         with:
-          version: ^7.0
+          version: ^8.0
       - name: Install Deps
         run: pnpm -r install --no-frozen-lockfile
       - name: Test Build
