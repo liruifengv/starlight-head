@@ -47,35 +47,37 @@ It will be covert to Starlight config:
 
 ```js
 starlight({
-  head: [
-	{
-		tag: 'meta',
-		attributes: {
-			name: 'description',
-			content: 'This is a description by starlight-head-plugin',
+	head: [
+		{
+			tag: "meta",
+			attributes: {
+				name: "description",
+				content: "This is a description by starlight-head-plugin",
+			},
 		},
-	},
-    {
-		tag: 'script',
-		content: 'window.onload = function() {\n\tconsole.log("Page loaded");\n}',
-    },
-  ],
+		{
+			tag: "script",
+			content: 'window.onload = function() {\n\tconsole.log("Page loaded");\n}',
+		},
+	],
 });
 ```
 
 ### Features
 
-- [x] Add `<head>` content to Starlight by `.astro` component.
-- [ ] Support expressions in `.astro` component.
-- [ ] Supports importing variables from other files.
-- [ ] Support add `<head>` for certain page.
+-   [x] Add `<head>` content to Starlight by `.astro` component.
+-   [ ] Support expressions in `.astro` component.
+-   [ ] Supports importing variables from other files.
+-   [ ] Support add `<head>` for certain page.
 
 ### Configuration Reference
 
 #### path (required)
+
 **type:** `string`
 
 A path to the file that contains the `<head>` content. Like `./src/components/head.astro`.
 
 ### License
+
 MIT
