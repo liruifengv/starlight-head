@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "vite build --watch",
-    "build": "vite build",
+    "build": "rimraf dist & vite build",
     "preinstall": "npx only-allow pnpm"
   },
   "types": "./dist/types/index.d.ts",
@@ -37,5 +37,9 @@
   "dependencies": {
     "@astrojs/compiler": "^2.7.1",
     "@astrojs/starlight": "^0.21.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "rimraf": "^5.0.5"
   }
 }

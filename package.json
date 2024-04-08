@@ -7,9 +7,9 @@
     "build": "pnpm run -r build",
     "version": "changeset version",
     "preinstall": "npx only-allow pnpm",
-	"format": "biome format src --write",
-	"lint": "biome lint src",
-	"check": "biome check --apply src"
+	"format": "biome format packages --write",
+	"lint": "biome lint packages",
+	"check": "biome check --apply packages"
   },
   "keywords": [],
   "author": "liruifengv",
