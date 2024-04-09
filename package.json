@@ -1,24 +1,24 @@
 {
-  "name": "starlight-head-monorepo",
-  "version": "0.0.0",
-  "description": "A Starlight plugin for easy to add <head> for your Starlight site",
-  "scripts": {
-    "changeset": "changeset",
-    "build": "pnpm run -r build",
-    "version": "changeset version",
-    "preinstall": "npx only-allow pnpm",
-	"format": "biome format packages --write",
-	"lint": "biome lint packages",
-	"check": "biome check --apply packages"
-  },
-  "keywords": [],
-  "author": "liruifengv",
-  "license": "MIT",
-  "devDependencies": {
-    "@biomejs/biome": "1.5.3",
-    "@changesets/cli": "^2.27.1",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.12",
-    "vite-plugin-dts": "^3.7.1"
-  }
+	"name": "starlight-head-monorepo",
+	"version": "0.0.0",
+	"description": "A Starlight plugin for easy to add <head> for your Starlight site",
+	"scripts": {
+		"changeset": "changeset",
+		"build": "pnpm run -r build",
+		"version": "changeset version",
+		"preinstall": "npx only-allow pnpm",
+		"format": "biome format packages --write",
+		"lint": "biome lint packages",
+		"check": "biome check --apply packages"
+	},
+	"keywords": [],
+	"author": "liruifengv",
+	"license": "MIT",
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@changesets/cli": "^2.27.1",
+		"typescript": "^5.3.3",
+		"vite": "^5.0.12",
+		"vite-plugin-dts": "^3.7.1"
+	}
 }
